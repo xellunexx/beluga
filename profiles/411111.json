@@ -1,0 +1,10 @@
+{
+  "country": "United States",
+  "brand": "VISA",
+  "k_c": "404142434445464748494A4B4C4D4E4F5051525354555657",
+  "cvm_threshold": 10000,
+  "iad_patch": true,
+  "tvr_clear_b3": true,
+  "floor_max": true,
+  "notes": "Standard Visa Test Profile with 3DES Kc Key"
+}

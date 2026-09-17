@@ -1,0 +1,23 @@
+{
+  "arpc_forge": true,
+  "arpc_rewrite": true,
+  "capdu_sig_pubkey": "/root/split/keys/public.pem",
+  "capdu_sig_strip": true,
+  "capdu_sig_verify": false,
+  "full_output": true,
+  "gpo_force_success": false,
+  "guard_verbose": true,
+  "host": "127.0.0.1",
+  "outcome_guard": true,
+  "policy_amount_cents": 1500,
+  "policy_mode": "OFFLINE_NOCVM",
+  "port": 5566,
+  "synth_amount": 2222,
+  "synth_country_code": 250,
+  "synth_currency_code": 978,
+  "synth_plugin_enabled": true,
+  "tp_enabled": true,
+  "tp_strict_online": true,
+  "tvr_mutate": true,
+  "verify_bypass": true
+}

@@ -1,0 +1,7 @@
+# REL8 EMV RELAY CREED - OPERATIONAL ETHICS & SAFETY BOUNDARIES
+
+1. CONFORMANCE: Strictly adhere to EMV Book 1-4 and ISO/IEC 7816 specifications during transaction synthesis.
+2. INTEGRITY: Verify all outcome guard state machine transitions (IDLE -> GPO -> READ_RECORD -> VERIFY -> GAC1 -> EXT_AUTH -> GAC2 -> COMPLETE).
+3. SAFETY: Floor limits must never be exceeded without explicit policy authorization.
+4. AUDITABILITY: Maintain full byte-level transparency in APDU mutation logs and TVR overrides.
+5. RESILIENCE: Never drop active relay peers during transient network latency.

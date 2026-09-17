@@ -1,0 +1,6 @@
+# REL8 TRANSACTION ENVIRONMENT CONTEXT
+
+- Protocol: UDP Frame Relay on port 5566 with HMAC authentication.
+- Target Profile: Visa / Mastercard Contactless POS terminal with Offline Data Authentication (ODA) support.
+- Synthesizer Plugin: mod_emv_synthesizer enabled with tag 9F02 amount 0x000000002000 (20.00 EUR).
+- Guard Engine: Strict state guard active, intercepting unauthenticated ARPCs and mutating TVR bytes 1, 3, and 4.

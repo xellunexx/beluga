@@ -1,0 +1,2 @@
+{'SCENARIO': 1, 'FUNCTION': 141, 'RESULT': 1}
+['script also exercised 11 registered scenarios']

@@ -1,0 +1,2135 @@
+{
+  "schema": 2,
+  "project_root": "C:\\Users\\ochak\\Downloads\\rel8new\\rel8stack\\memory",
+  "updated_at": "2026-09-01T17:32:50",
+  "files": {
+    "ai_tools.py": {
+      "sha256": "25cf99fa27d3db77619e72dd5dd13b57a896f79faca2aec8a6bdeac7695d34a2",
+      "bytes": 86690,
+      "lines": 1974,
+      "module": "ai_tools",
+      "imports": [
+        "__future__",
+        "ast",
+        "difflib",
+        "inspect",
+        "io",
+        "json",
+        "logging",
+        "os",
+        "re",
+        "sys",
+        "time",
+        "traceback",
+        "dataclasses",
+        "pathlib",
+        "emv_cognition",
+        "typing",
+        "emv_god",
+        "constants",
+        "emv",
+        "guard",
+        "issuer_profiles",
+        "issuer_simulator",
+        "mod_emv_synthesizer",
+        "mutations",
+        "parser",
+        "protocol",
+        "tlv",
+        "utils",
+        "emv_god",
+        "logger"
+      ],
+      "parse_error": null,
+      "symbols": [
+        {
+          "name": "ToolResult",
+          "kind": "ClassDef",
+          "line": 54,
+          "end_line": 84
+        },
+        {
+          "name": "AITool",
+          "kind": "ClassDef",
+          "line": 88,
+          "end_line": 117
+        },
+        {
+          "name": "AIToolRegistry",
+          "kind": "ClassDef",
+          "line": 120,
+          "end_line": 1804
+        },
+        {
+          "name": "detect_and_execute_tools",
+          "kind": "FunctionDef",
+          "line": 1807,
+          "end_line": 1974
+        },
+        {
+          "name": "to_dict",
+          "kind": "FunctionDef",
+          "line": 62,
+          "end_line": 69
+        },
+        {
+          "name": "format_text",
+          "kind": "FunctionDef",
+          "line": 71,
+          "end_line": 84
+        },
+        {
+          "name": "execute",
+          "kind": "FunctionDef",
+          "line": 96,
+          "end_line": 106
+        },
+        {
+          "name": "to_openai_schema",
+          "kind": "FunctionDef",
+          "line": 108,
+          "end_line": 117
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 123,
+          "end_line": 177
+        },
+        {
+          "name": "set_omnipotent_mode",
+          "kind": "FunctionDef",
+          "line": 179,
+          "end_line": 181
+        },
+        {
+          "name": "runtime_health",
+          "kind": "FunctionDef",
+          "line": 183,
+          "end_line": 196
+        },
+        {
+          "name": "register",
+          "kind": "FunctionDef",
+          "line": 198,
+          "end_line": 199
+        },
+        {
+          "name": "get_tool",
+          "kind": "FunctionDef",
+          "line": 201,
+          "end_line": 202
+        },
+        {
+          "name": "list_tools",
+          "kind": "FunctionDef",
+          "line": 204,
+          "end_line": 205
+        },
+        {
+          "name": "get_openai_tools_schema",
+          "kind": "FunctionDef",
+          "line": 207,
+          "end_line": 208
+        },
+        {
+          "name": "execute_tool",
+          "kind": "FunctionDef",
+          "line": 210,
+          "end_line": 224
+        },
+        {
+          "name": "_init_emv_layer2",
+          "kind": "FunctionDef",
+          "line": 230,
+          "end_line": 303
+        },
+        {
+          "name": "get_emv_layer2_context",
+          "kind": "FunctionDef",
+          "line": 305,
+          "end_line": 311
+        },
+        {
+          "name": "get_emv_layer3_context",
+          "kind": "FunctionDef",
+          "line": 314,
+          "end_line": 323
+        },
+        {
+          "name": "_tool_god_project_map",
+          "kind": "FunctionDef",
+          "line": 325,
+          "end_line": 333
+        },
+        {
+          "name": "_tool_god_verify",
+          "kind": "FunctionDef",
+          "line": 335,
+          "end_line": 339
+        },
+        {
+          "name": "_tool_god_set_task",
+          "kind": "FunctionDef",
+          "line": 341,
+          "end_line": 345
+        },
+        {
+          "name": "_tool_god_lesson",
+          "kind": "FunctionDef",
+          "line": 347,
+          "end_line": 351
+        },
+        {
+          "name": "_tool_get_stack_status",
+          "kind": "FunctionDef",
+          "line": 354,
+          "end_line": 399
+        },
+        {
+          "name": "_tool_parse_apdu",
+          "kind": "FunctionDef",
+          "line": 401,
+          "end_line": 499
+        },
+        {
+          "name": "_lookup_tag_name",
+          "kind": "FunctionDef",
+          "line": 501,
+          "end_line": 551
+        },
+        {
+          "name": "_tool_parse_tlv",
+          "kind": "FunctionDef",
+          "line": 553,
+          "end_line": 578
+        },
+        {
+          "name": "_tool_simulate_apdu_mutation",
+          "kind": "FunctionDef",
+          "line": 580,
+          "end_line": 659
+        },
+        {
+          "name": "_tool_evaluate_issuer_authorization",
+          "kind": "FunctionDef",
+          "line": 661,
+          "end_line": 700
+        },
+        {
+          "name": "_tool_inspect_issuer_profile",
+          "kind": "FunctionDef",
+          "line": 702,
+          "end_line": 735
+        },
+        {
+          "name": "_tool_list_profiles",
+          "kind": "FunctionDef",
+          "line": 737,
+          "end_line": 759
+        },
+        {
+          "name": "_tool_search_logs",
+          "kind": "FunctionDef",
+          "line": 761,
+          "end_line": 804
+        },
+        {
+          "name": "_tool_get_recent_trace",
+          "kind": "FunctionDef",
+          "line": 806,
+          "end_line": 833
+        },
+        {
+          "name": "_tool_reset_guard_fsm",
+          "kind": "FunctionDef",
+          "line": 835,
+          "end_line": 848
+        },
+        {
+          "name": "_tool_remember_fact",
+          "kind": "FunctionDef",
+          "line": 850,
+          "end_line": 854
+        },
+        {
+          "name": "_tool_recall_memory",
+          "kind": "FunctionDef",
+          "line": 856,
+          "end_line": 867
+        },
+        {
+          "name": "_tool_forget_fact",
+          "kind": "FunctionDef",
+          "line": 869,
+          "end_line": 878
+        },
+        {
+          "name": "_tool_inspect_project_code",
+          "kind": "FunctionDef",
+          "line": 880,
+          "end_line": 1008
+        },
+        {
+          "name": "_tool_inject_packet",
+          "kind": "FunctionDef",
+          "line": 1010,
+          "end_line": 1132
+        },
+        {
+          "name": "_tool_modify_project_code",
+          "kind": "FunctionDef",
+          "line": 1136,
+          "end_line": 1370
+        },
+        {
+          "name": "_tool_direct_stack_write",
+          "kind": "FunctionDef",
+          "line": 1374,
+          "end_line": 1432
+        },
+        {
+          "name": "_tool_execute_python",
+          "kind": "FunctionDef",
+          "line": 1434,
+          "end_line": 1497
+        },
+        {
+          "name": "_register_default_tools",
+          "kind": "FunctionDef",
+          "line": 1503,
+          "end_line": 1804
+        },
+        {
+          "name": "node_to_dict",
+          "kind": "FunctionDef",
+          "line": 562,
+          "end_line": 571
+        },
+        {
+          "name": "_safe_signature",
+          "kind": "FunctionDef",
+          "line": 915,
+          "end_line": 919
+        },
+        {
+          "name": "_safe_line_number",
+          "kind": "FunctionDef",
+          "line": 921,
+          "end_line": 925
+        }
+      ]
+    },
+    "qt_app.py": {
+      "sha256": "5795a23da7e4f80717459319de97e612a8fa8b059e706a0719d8b3195c99535c",
+      "bytes": 330938,
+      "lines": 7217,
+      "module": "qt_app",
+      "imports": [
+        "__future__",
+        "importlib",
+        "inspect",
+        "json",
+        "os",
+        "random",
+        "re",
+        "shutil",
+        "subprocess",
+        "sys",
+        "threading",
+        "time",
+        "urllib.error",
+        "urllib.request",
+        "re",
+        "collections",
+        "dataclasses",
+        "pathlib",
+        "typing",
+        "datetime",
+        "PyQt6",
+        "PyQt6.QtCore",
+        "PyQt6.QtGui",
+        "PyQt6.QtWidgets",
+        "agent_memory",
+        "ai_tools",
+        "ai_tools",
+        "bypasses",
+        "constants",
+        "emv",
+        "guard",
+        "issuer_profiles",
+        "issuer_simulator",
+        "logger",
+        "mod_emv_synthesizer",
+        "mutations",
+        "parser",
+        "protocol",
+        "rel8hf",
+        "rel8hf_launcher",
+        "tlv",
+        "tp_hub",
+        "rel8hf",
+        "rel8hf_launcher",
+        "ai_tools",
+        "ai_tools",
+        "ai_tools",
+        "rel8hf",
+        "hashlib",
+        "PySide6",
+        "PySide6.QtCore",
+        "PySide6.QtGui",
+        "PySide6.QtWidgets"
+      ],
+      "parse_error": null,
+      "symbols": [
+        {
+          "name": "AIContext",
+          "kind": "ClassDef",
+          "line": 198,
+          "end_line": 230
+        },
+        {
+          "name": "AppRuntime",
+          "kind": "ClassDef",
+          "line": 233,
+          "end_line": 276
+        },
+        {
+          "name": "ChatBridge",
+          "kind": "ClassDef",
+          "line": 280,
+          "end_line": 281
+        },
+        {
+          "name": "ModuleInfo",
+          "kind": "ClassDef",
+          "line": 311,
+          "end_line": 318
+        },
+        {
+          "name": "ProjectRuntime",
+          "kind": "ClassDef",
+          "line": 364,
+          "end_line": 445
+        },
+        {
+          "name": "open_directory_in_file_manager",
+          "kind": "FunctionDef",
+          "line": 545,
+          "end_line": 560
+        },
+        {
+          "name": "LocalLLMEngine",
+          "kind": "ClassDef",
+          "line": 563,
+          "end_line": 1971
+        },
+        {
+          "name": "LLMWorker",
+          "kind": "ClassDef",
+          "line": 1978,
+          "end_line": 2003
+        },
+        {
+          "name": "LlmVerifyWorker",
+          "kind": "ClassDef",
+          "line": 2006,
+          "end_line": 2015
+        },
+        {
+          "name": "LlmChatWorker",
+          "kind": "ClassDef",
+          "line": 2018,
+          "end_line": 2053
+        },
+        {
+          "name": "LlmLogUploadDialog",
+          "kind": "ClassDef",
+          "line": 2060,
+          "end_line": 2330
+        },
+        {
+          "name": "AIToolsCatalogDialog",
+          "kind": "ClassDef",
+          "line": 2337,
+          "end_line": 2543
+        },
+        {
+          "name": "LlmChatWidget",
+          "kind": "ClassDef",
+          "line": 2550,
+          "end_line": 3407
+        },
+        {
+          "name": "TestWorker",
+          "kind": "ClassDef",
+          "line": 3410,
+          "end_line": 3446
+        },
+        {
+          "name": "TestHubWidget",
+          "kind": "ClassDef",
+          "line": 3449,
+          "end_line": 3591
+        },
+        {
+          "name": "ZenFocusOverlay",
+          "kind": "ClassDef",
+          "line": 3594,
+          "end_line": 3670
+        },
+        {
+          "name": "FocusEventFilter",
+          "kind": "ClassDef",
+          "line": 3673,
+          "end_line": 3710
+        },
+        {
+          "name": "TransactionReplayWidget",
+          "kind": "ClassDef",
+          "line": 3713,
+          "end_line": 3853
+        },
+        {
+          "name": "LlmChatDialog",
+          "kind": "ClassDef",
+          "line": 3856,
+          "end_line": 3894
+        },
+        {
+          "name": "LlmSettingsDialog",
+          "kind": "ClassDef",
+          "line": 3901,
+          "end_line": 4381
+        },
+        {
+          "name": "Rel8FullScreenTabWindow",
+          "kind": "ClassDef",
+          "line": 4388,
+          "end_line": 4513
+        },
+        {
+          "name": "Rel8TabWidget",
+          "kind": "ClassDef",
+          "line": 4516,
+          "end_line": 4717
+        },
+        {
+          "name": "Rel8AppletWindow",
+          "kind": "ClassDef",
+          "line": 4724,
+          "end_line": 7194
+        },
+        {
+          "name": "launch_applet",
+          "kind": "FunctionDef",
+          "line": 7205,
+          "end_line": 7213
+        },
+        {
+          "name": "to_prompt",
+          "kind": "FunctionDef",
+          "line": 207,
+          "end_line": 222
+        },
+        {
+          "name": "log_event",
+          "kind": "FunctionDef",
+          "line": 225,
+          "end_line": 230
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 236,
+          "end_line": 237
+        },
+        {
+          "name": "get_app_state",
+          "kind": "FunctionDef",
+          "line": 239,
+          "end_line": 245
+        },
+        {
+          "name": "inspect_ui",
+          "kind": "FunctionDef",
+          "line": 247,
+          "end_line": 276
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 367,
+          "end_line": 372
+        },
+        {
+          "name": "load_all_modules",
+          "kind": "FunctionDef",
+          "line": 374,
+          "end_line": 411
+        },
+        {
+          "name": "get_runtime_snapshot",
+          "kind": "FunctionDef",
+          "line": 413,
+          "end_line": 427
+        },
+        {
+          "name": "get_context_summary_for_llm",
+          "kind": "FunctionDef",
+          "line": 429,
+          "end_line": 445
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 566,
+          "end_line": 618
+        },
+        {
+          "name": "_stop_repetition",
+          "kind": "FunctionDef",
+          "line": 620,
+          "end_line": 672
+        },
+        {
+          "name": "set_omnipotent_mode",
+          "kind": "FunctionDef",
+          "line": 674,
+          "end_line": 678
+        },
+        {
+          "name": "set_app_runtime",
+          "kind": "FunctionDef",
+          "line": 680,
+          "end_line": 688
+        },
+        {
+          "name": "execute_tool",
+          "kind": "FunctionDef",
+          "line": 690,
+          "end_line": 692
+        },
+        {
+          "name": "list_available_tools",
+          "kind": "FunctionDef",
+          "line": 694,
+          "end_line": 696
+        },
+        {
+          "name": "start_local_ai",
+          "kind": "FunctionDef",
+          "line": 699,
+          "end_line": 724
+        },
+        {
+          "name": "stop_local_ai",
+          "kind": "FunctionDef",
+          "line": 726,
+          "end_line": 747
+        },
+        {
+          "name": "is_local_ai_running",
+          "kind": "FunctionDef",
+          "line": 749,
+          "end_line": 753
+        },
+        {
+          "name": "_emit_activity",
+          "kind": "FunctionDef",
+          "line": 755,
+          "end_line": 762
+        },
+        {
+          "name": "send_keepalive",
+          "kind": "FunctionDef",
+          "line": 764,
+          "end_line": 841
+        },
+        {
+          "name": "clear_chat_history",
+          "kind": "FunctionDef",
+          "line": 843,
+          "end_line": 853
+        },
+        {
+          "name": "add_chat_message",
+          "kind": "FunctionDef",
+          "line": 855,
+          "end_line": 861
+        },
+        {
+          "name": "get_chat_history",
+          "kind": "FunctionDef",
+          "line": 863,
+          "end_line": 864
+        },
+        {
+          "name": "import_creed_file",
+          "kind": "FunctionDef",
+          "line": 866,
+          "end_line": 871
+        },
+        {
+          "name": "import_context_file",
+          "kind": "FunctionDef",
+          "line": 873,
+          "end_line": 878
+        },
+        {
+          "name": "import_goal_file",
+          "kind": "FunctionDef",
+          "line": 880,
+          "end_line": 885
+        },
+        {
+          "name": "save_creed_file",
+          "kind": "FunctionDef",
+          "line": 887,
+          "end_line": 889
+        },
+        {
+          "name": "save_context_file",
+          "kind": "FunctionDef",
+          "line": 891,
+          "end_line": 893
+        },
+        {
+          "name": "save_goal_file",
+          "kind": "FunctionDef",
+          "line": 895,
+          "end_line": 897
+        },
+        {
+          "name": "get_logs_dir",
+          "kind": "FunctionDef",
+          "line": 903,
+          "end_line": 906
+        },
+        {
+          "name": "get_logs_folder",
+          "kind": "FunctionDef",
+          "line": 908,
+          "end_line": 910
+        },
+        {
+          "name": "set_logs_dir",
+          "kind": "FunctionDef",
+          "line": 912,
+          "end_line": 917
+        },
+        {
+          "name": "list_log_files",
+          "kind": "FunctionDef",
+          "line": 919,
+          "end_line": 943
+        },
+        {
+          "name": "list_logs",
+          "kind": "FunctionDef",
+          "line": 945,
+          "end_line": 947
+        },
+        {
+          "name": "get_log_file_paths",
+          "kind": "FunctionDef",
+          "line": 949,
+          "end_line": 952
+        },
+        {
+          "name": "read_log_file",
+          "kind": "FunctionDef",
+          "line": 954,
+          "end_line": 973
+        },
+        {
+          "name": "read_log",
+          "kind": "FunctionDef",
+          "line": 975,
+          "end_line": 977
+        },
+        {
+          "name": "upload_log_file",
+          "kind": "FunctionDef",
+          "line": 979,
+          "end_line": 988
+        },
+        {
+          "name": "upload_file_to_logs",
+          "kind": "FunctionDef",
+          "line": 990,
+          "end_line": 992
+        },
+        {
+          "name": "submit_log_file",
+          "kind": "FunctionDef",
+          "line": 994,
+          "end_line": 1002
+        },
+        {
+          "name": "submit_file_to_logs",
+          "kind": "FunctionDef",
+          "line": 1004,
+          "end_line": 1006
+        },
+        {
+          "name": "delete_log_file",
+          "kind": "FunctionDef",
+          "line": 1008,
+          "end_line": 1016
+        },
+        {
+          "name": "clear_logs_folder",
+          "kind": "FunctionDef",
+          "line": 1018,
+          "end_line": 1029
+        },
+        {
+          "name": "get_logs_summary",
+          "kind": "FunctionDef",
+          "line": 1031,
+          "end_line": 1054
+        },
+        {
+          "name": "build_system_prompt",
+          "kind": "FunctionDef",
+          "line": 1056,
+          "end_line": 1160
+        },
+        {
+          "name": "verify_connection",
+          "kind": "FunctionDef",
+          "line": 1162,
+          "end_line": 1308
+        },
+        {
+          "name": "fetch_available_models",
+          "kind": "FunctionDef",
+          "line": 1310,
+          "end_line": 1313
+        },
+        {
+          "name": "generate_response",
+          "kind": "FunctionDef",
+          "line": 1315,
+          "end_line": 1334
+        },
+        {
+          "name": "chat",
+          "kind": "FunctionDef",
+          "line": 1336,
+          "end_line": 1355
+        },
+        {
+          "name": "_build_llm_messages",
+          "kind": "FunctionDef",
+          "line": 1357,
+          "end_line": 1387
+        },
+        {
+          "name": "_query_embedded_expert",
+          "kind": "FunctionDef",
+          "line": 1389,
+          "end_line": 1639
+        },
+        {
+          "name": "_query_ollama",
+          "kind": "FunctionDef",
+          "line": 1641,
+          "end_line": 1712
+        },
+        {
+          "name": "_query_openai",
+          "kind": "FunctionDef",
+          "line": 1714,
+          "end_line": 1971
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 1983,
+          "end_line": 1992
+        },
+        {
+          "name": "run",
+          "kind": "FunctionDef",
+          "line": 1994,
+          "end_line": 2003
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 2009,
+          "end_line": 2011
+        },
+        {
+          "name": "run",
+          "kind": "FunctionDef",
+          "line": 2013,
+          "end_line": 2015
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 2023,
+          "end_line": 2034
+        },
+        {
+          "name": "run",
+          "kind": "FunctionDef",
+          "line": 2036,
+          "end_line": 2053
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 2065,
+          "end_line": 2084
+        },
+        {
+          "name": "_init_ui",
+          "kind": "FunctionDef",
+          "line": 2086,
+          "end_line": 2205
+        },
+        {
+          "name": "_populate_existing_logs",
+          "kind": "FunctionDef",
+          "line": 2207,
+          "end_line": 2223
+        },
+        {
+          "name": "_on_existing_log_selected",
+          "kind": "FunctionDef",
+          "line": 2225,
+          "end_line": 2232
+        },
+        {
+          "name": "_on_browse_file",
+          "kind": "FunctionDef",
+          "line": 2234,
+          "end_line": 2249
+        },
+        {
+          "name": "_on_intent_changed",
+          "kind": "FunctionDef",
+          "line": 2251,
+          "end_line": 2266
+        },
+        {
+          "name": "_on_submit_clicked",
+          "kind": "FunctionDef",
+          "line": 2268,
+          "end_line": 2330
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 2342,
+          "end_line": 2353
+        },
+        {
+          "name": "_init_ui",
+          "kind": "FunctionDef",
+          "line": 2355,
+          "end_line": 2487
+        },
+        {
+          "name": "_on_tool_selected",
+          "kind": "FunctionDef",
+          "line": 2489,
+          "end_line": 2513
+        },
+        {
+          "name": "_run_tool_live",
+          "kind": "FunctionDef",
+          "line": 2515,
+          "end_line": 2533
+        },
+        {
+          "name": "_send_to_chat",
+          "kind": "FunctionDef",
+          "line": 2535,
+          "end_line": 2543
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 2553,
+          "end_line": 2577
+        },
+        {
+          "name": "_init_ui",
+          "kind": "FunctionDef",
+          "line": 2605,
+          "end_line": 2646
+        },
+        {
+          "name": "_build_command_header",
+          "kind": "FunctionDef",
+          "line": 2648,
+          "end_line": 2739
+        },
+        {
+          "name": "_build_control_dock",
+          "kind": "FunctionDef",
+          "line": 2741,
+          "end_line": 2949
+        },
+        {
+          "name": "_make_tool_button",
+          "kind": "FunctionDef",
+          "line": 2951,
+          "end_line": 2957
+        },
+        {
+          "name": "_make_collapsible_section",
+          "kind": "FunctionDef",
+          "line": 2959,
+          "end_line": 3004
+        },
+        {
+          "name": "eventFilter",
+          "kind": "FunctionDef",
+          "line": 3006,
+          "end_line": 3013
+        },
+        {
+          "name": "_update_status_bar",
+          "kind": "FunctionDef",
+          "line": 3015,
+          "end_line": 3030
+        },
+        {
+          "name": "_on_omnipotent_mode_toggled",
+          "kind": "FunctionDef",
+          "line": 3032,
+          "end_line": 3043
+        },
+        {
+          "name": "_start_local_ai",
+          "kind": "FunctionDef",
+          "line": 3045,
+          "end_line": 3053
+        },
+        {
+          "name": "_stop_local_ai",
+          "kind": "FunctionDef",
+          "line": 3055,
+          "end_line": 3059
+        },
+        {
+          "name": "_verify_connection",
+          "kind": "FunctionDef",
+          "line": 3061,
+          "end_line": 3066
+        },
+        {
+          "name": "_on_chat_verify_finished",
+          "kind": "FunctionDef",
+          "line": 3068,
+          "end_line": 3077
+        },
+        {
+          "name": "_open_settings",
+          "kind": "FunctionDef",
+          "line": 3079,
+          "end_line": 3082
+        },
+        {
+          "name": "_open_tools_catalog",
+          "kind": "FunctionDef",
+          "line": 3084,
+          "end_line": 3087
+        },
+        {
+          "name": "_prompt_parse_apdu",
+          "kind": "FunctionDef",
+          "line": 3089,
+          "end_line": 3097
+        },
+        {
+          "name": "_prompt_decode_tlv",
+          "kind": "FunctionDef",
+          "line": 3099,
+          "end_line": 3107
+        },
+        {
+          "name": "_prompt_inject_packet",
+          "kind": "FunctionDef",
+          "line": 3109,
+          "end_line": 3117
+        },
+        {
+          "name": "_prompt_modify_code",
+          "kind": "FunctionDef",
+          "line": 3119,
+          "end_line": 3131
+        },
+        {
+          "name": "_prompt_stack_write",
+          "kind": "FunctionDef",
+          "line": 3133,
+          "end_line": 3146
+        },
+        {
+          "name": "_sync_history_from_engine",
+          "kind": "FunctionDef",
+          "line": 3148,
+          "end_line": 3151
+        },
+        {
+          "name": "_load_existing_chat_history",
+          "kind": "FunctionDef",
+          "line": 3153,
+          "end_line": 3176
+        },
+        {
+          "name": "_update_display",
+          "kind": "FunctionDef",
+          "line": 3178,
+          "end_line": 3189
+        },
+        {
+          "name": "_create_message_html",
+          "kind": "FunctionDef",
+          "line": 3191,
+          "end_line": 3244
+        },
+        {
+          "name": "_expand_chat_view",
+          "kind": "FunctionDef",
+          "line": 3246,
+          "end_line": 3258
+        },
+        {
+          "name": "_render_message",
+          "kind": "FunctionDef",
+          "line": 3260,
+          "end_line": 3264
+        },
+        {
+          "name": "send_prompt",
+          "kind": "FunctionDef",
+          "line": 3266,
+          "end_line": 3295
+        },
+        {
+          "name": "on_send_clicked",
+          "kind": "FunctionDef",
+          "line": 3297,
+          "end_line": 3303
+        },
+        {
+          "name": "on_stop_clicked",
+          "kind": "FunctionDef",
+          "line": 3305,
+          "end_line": 3310
+        },
+        {
+          "name": "_on_chunk_received",
+          "kind": "FunctionDef",
+          "line": 3312,
+          "end_line": 3315
+        },
+        {
+          "name": "_on_finished_response",
+          "kind": "FunctionDef",
+          "line": 3317,
+          "end_line": 3329
+        },
+        {
+          "name": "_on_error_response",
+          "kind": "FunctionDef",
+          "line": 3331,
+          "end_line": 3334
+        },
+        {
+          "name": "_finalize_turn",
+          "kind": "FunctionDef",
+          "line": 3336,
+          "end_line": 3343
+        },
+        {
+          "name": "_open_log_upload_dialog",
+          "kind": "FunctionDef",
+          "line": 3345,
+          "end_line": 3354
+        },
+        {
+          "name": "_on_log_submitted",
+          "kind": "FunctionDef",
+          "line": 3356,
+          "end_line": 3359
+        },
+        {
+          "name": "clear_conversation",
+          "kind": "FunctionDef",
+          "line": 3361,
+          "end_line": 3371
+        },
+        {
+          "name": "copy_conversation",
+          "kind": "FunctionDef",
+          "line": 3373,
+          "end_line": 3383
+        },
+        {
+          "name": "export_conversation",
+          "kind": "FunctionDef",
+          "line": 3385,
+          "end_line": 3407
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 3415,
+          "end_line": 3418
+        },
+        {
+          "name": "run",
+          "kind": "FunctionDef",
+          "line": 3420,
+          "end_line": 3442
+        },
+        {
+          "name": "stop",
+          "kind": "FunctionDef",
+          "line": 3444,
+          "end_line": 3446
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 3452,
+          "end_line": 3455
+        },
+        {
+          "name": "_init_ui",
+          "kind": "FunctionDef",
+          "line": 3457,
+          "end_line": 3534
+        },
+        {
+          "name": "_refresh_test_list",
+          "kind": "FunctionDef",
+          "line": 3536,
+          "end_line": 3546
+        },
+        {
+          "name": "run_tests",
+          "kind": "FunctionDef",
+          "line": 3548,
+          "end_line": 3565
+        },
+        {
+          "name": "stop_tests",
+          "kind": "FunctionDef",
+          "line": 3567,
+          "end_line": 3571
+        },
+        {
+          "name": "_append_console",
+          "kind": "FunctionDef",
+          "line": 3573,
+          "end_line": 3575
+        },
+        {
+          "name": "_on_tests_finished",
+          "kind": "FunctionDef",
+          "line": 3577,
+          "end_line": 3591
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 3597,
+          "end_line": 3640
+        },
+        {
+          "name": "showEvent",
+          "kind": "FunctionDef",
+          "line": 3642,
+          "end_line": 3644
+        },
+        {
+          "name": "keyPressEvent",
+          "kind": "FunctionDef",
+          "line": 3646,
+          "end_line": 3650
+        },
+        {
+          "name": "close_and_restore",
+          "kind": "FunctionDef",
+          "line": 3652,
+          "end_line": 3670
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 3676,
+          "end_line": 3679
+        },
+        {
+          "name": "eventFilter",
+          "kind": "FunctionDef",
+          "line": 3681,
+          "end_line": 3698
+        },
+        {
+          "name": "trigger_zen_focus",
+          "kind": "FunctionDef",
+          "line": 3700,
+          "end_line": 3710
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 3719,
+          "end_line": 3721
+        },
+        {
+          "name": "_init_ui",
+          "kind": "FunctionDef",
+          "line": 3723,
+          "end_line": 3790
+        },
+        {
+          "name": "_refresh_logs",
+          "kind": "FunctionDef",
+          "line": 3792,
+          "end_line": 3797
+        },
+        {
+          "name": "run_replay",
+          "kind": "FunctionDef",
+          "line": 3799,
+          "end_line": 3853
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 3859,
+          "end_line": 3885
+        },
+        {
+          "name": "__getattr__",
+          "kind": "FunctionDef",
+          "line": 3887,
+          "end_line": 3891
+        },
+        {
+          "name": "send_prompt",
+          "kind": "FunctionDef",
+          "line": 3893,
+          "end_line": 3894
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 3906,
+          "end_line": 3919
+        },
+        {
+          "name": "_init_ui",
+          "kind": "FunctionDef",
+          "line": 3921,
+          "end_line": 4164
+        },
+        {
+          "name": "_load_from_engine",
+          "kind": "FunctionDef",
+          "line": 4166,
+          "end_line": 4195
+        },
+        {
+          "name": "_browse_vbs_script",
+          "kind": "FunctionDef",
+          "line": 4197,
+          "end_line": 4205
+        },
+        {
+          "name": "_on_start_local_ai",
+          "kind": "FunctionDef",
+          "line": 4207,
+          "end_line": 4218
+        },
+        {
+          "name": "_on_stop_local_ai",
+          "kind": "FunctionDef",
+          "line": 4220,
+          "end_line": 4224
+        },
+        {
+          "name": "_on_backend_changed",
+          "kind": "FunctionDef",
+          "line": 4226,
+          "end_line": 4253
+        },
+        {
+          "name": "_apply_preset",
+          "kind": "FunctionDef",
+          "line": 4255,
+          "end_line": 4267
+        },
+        {
+          "name": "_sync_url_to_protocol",
+          "kind": "FunctionDef",
+          "line": 4269,
+          "end_line": 4276
+        },
+        {
+          "name": "_toggle_key_visibility",
+          "kind": "FunctionDef",
+          "line": 4278,
+          "end_line": 4284
+        },
+        {
+          "name": "get_full_endpoint_url",
+          "kind": "FunctionDef",
+          "line": 4286,
+          "end_line": 4294
+        },
+        {
+          "name": "run_connection_test",
+          "kind": "FunctionDef",
+          "line": 4296,
+          "end_line": 4311
+        },
+        {
+          "name": "_on_verification_finished",
+          "kind": "FunctionDef",
+          "line": 4313,
+          "end_line": 4315
+        },
+        {
+          "name": "_display_verification_result",
+          "kind": "FunctionDef",
+          "line": 4317,
+          "end_line": 4365
+        },
+        {
+          "name": "_fetch_remote_models",
+          "kind": "FunctionDef",
+          "line": 4367,
+          "end_line": 4368
+        },
+        {
+          "name": "_save_and_apply",
+          "kind": "FunctionDef",
+          "line": 4370,
+          "end_line": 4381
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 4391,
+          "end_line": 4418
+        },
+        {
+          "name": "_init_ui",
+          "kind": "FunctionDef",
+          "line": 4420,
+          "end_line": 4473
+        },
+        {
+          "name": "toggle_maximize",
+          "kind": "FunctionDef",
+          "line": 4475,
+          "end_line": 4481
+        },
+        {
+          "name": "toggle_fullscreen",
+          "kind": "FunctionDef",
+          "line": 4483,
+          "end_line": 4489
+        },
+        {
+          "name": "keyPressEvent",
+          "kind": "FunctionDef",
+          "line": 4491,
+          "end_line": 4500
+        },
+        {
+          "name": "dock_back",
+          "kind": "FunctionDef",
+          "line": 4502,
+          "end_line": 4507
+        },
+        {
+          "name": "closeEvent",
+          "kind": "FunctionDef",
+          "line": 4509,
+          "end_line": 4513
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 4519,
+          "end_line": 4526
+        },
+        {
+          "name": "_setup_corner_controls",
+          "kind": "FunctionDef",
+          "line": 4528,
+          "end_line": 4548
+        },
+        {
+          "name": "_setup_tab_bar_features",
+          "kind": "FunctionDef",
+          "line": 4550,
+          "end_line": 4555
+        },
+        {
+          "name": "_on_tab_double_clicked",
+          "kind": "FunctionDef",
+          "line": 4557,
+          "end_line": 4559
+        },
+        {
+          "name": "_on_current_changed",
+          "kind": "FunctionDef",
+          "line": 4561,
+          "end_line": 4563
+        },
+        {
+          "name": "_on_tab_context_menu",
+          "kind": "FunctionDef",
+          "line": 4565,
+          "end_line": 4587
+        },
+        {
+          "name": "toggle_minimize_content",
+          "kind": "FunctionDef",
+          "line": 4589,
+          "end_line": 4593
+        },
+        {
+          "name": "minimize_content",
+          "kind": "FunctionDef",
+          "line": 4595,
+          "end_line": 4604
+        },
+        {
+          "name": "restore_content",
+          "kind": "FunctionDef",
+          "line": 4606,
+          "end_line": 4615
+        },
+        {
+          "name": "fullscreen_active_tab",
+          "kind": "FunctionDef",
+          "line": 4617,
+          "end_line": 4618
+        },
+        {
+          "name": "fullscreen_tab_at",
+          "kind": "FunctionDef",
+          "line": 4620,
+          "end_line": 4682
+        },
+        {
+          "name": "dock_tab",
+          "kind": "FunctionDef",
+          "line": 4684,
+          "end_line": 4713
+        },
+        {
+          "name": "dock_all_tabs",
+          "kind": "FunctionDef",
+          "line": 4715,
+          "end_line": 4717
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 4727,
+          "end_line": 4749
+        },
+        {
+          "name": "_apply_dark_theme",
+          "kind": "FunctionDef",
+          "line": 4755,
+          "end_line": 4952
+        },
+        {
+          "name": "_init_menu_bar",
+          "kind": "FunctionDef",
+          "line": 4958,
+          "end_line": 5070
+        },
+        {
+          "name": "_init_ui",
+          "kind": "FunctionDef",
+          "line": 5076,
+          "end_line": 5111
+        },
+        {
+          "name": "_install_zen_focus_hooks",
+          "kind": "FunctionDef",
+          "line": 5113,
+          "end_line": 5151
+        },
+        {
+          "name": "_create_chat_tab",
+          "kind": "FunctionDef",
+          "line": 5153,
+          "end_line": 5159
+        },
+        {
+          "name": "_create_test_hub_tab",
+          "kind": "FunctionDef",
+          "line": 5161,
+          "end_line": 5163
+        },
+        {
+          "name": "_create_header_dashboard",
+          "kind": "FunctionDef",
+          "line": 5165,
+          "end_line": 5218
+        },
+        {
+          "name": "_create_relay_tab",
+          "kind": "FunctionDef",
+          "line": 5224,
+          "end_line": 5354
+        },
+        {
+          "name": "_create_llm_tab",
+          "kind": "FunctionDef",
+          "line": 5360,
+          "end_line": 5568
+        },
+        {
+          "name": "_create_runtime_tab",
+          "kind": "FunctionDef",
+          "line": 5574,
+          "end_line": 5615
+        },
+        {
+          "name": "_create_apdu_tab",
+          "kind": "FunctionDef",
+          "line": 5621,
+          "end_line": 5830
+        },
+        {
+          "name": "_create_logs_tab",
+          "kind": "FunctionDef",
+          "line": 5836,
+          "end_line": 5870
+        },
+        {
+          "name": "_init_tray_icon",
+          "kind": "FunctionDef",
+          "line": 5876,
+          "end_line": 5889
+        },
+        {
+          "name": "_init_timers",
+          "kind": "FunctionDef",
+          "line": 5891,
+          "end_line": 5894
+        },
+        {
+          "name": "toggle_window_fullscreen",
+          "kind": "FunctionDef",
+          "line": 5896,
+          "end_line": 5901
+        },
+        {
+          "name": "dock_all_tabs",
+          "kind": "FunctionDef",
+          "line": 5903,
+          "end_line": 5910
+        },
+        {
+          "name": "closeEvent",
+          "kind": "FunctionDef",
+          "line": 5912,
+          "end_line": 5918
+        },
+        {
+          "name": "on_import_creed_dialog",
+          "kind": "FunctionDef",
+          "line": 5924,
+          "end_line": 5935
+        },
+        {
+          "name": "on_import_context_dialog",
+          "kind": "FunctionDef",
+          "line": 5937,
+          "end_line": 5948
+        },
+        {
+          "name": "on_import_goal_dialog",
+          "kind": "FunctionDef",
+          "line": 5950,
+          "end_line": 5961
+        },
+        {
+          "name": "on_save_creed_dialog",
+          "kind": "FunctionDef",
+          "line": 5963,
+          "end_line": 5969
+        },
+        {
+          "name": "on_save_context_dialog",
+          "kind": "FunctionDef",
+          "line": 5971,
+          "end_line": 5977
+        },
+        {
+          "name": "on_save_goal_dialog",
+          "kind": "FunctionDef",
+          "line": 5979,
+          "end_line": 5985
+        },
+        {
+          "name": "on_batch_import_dialog",
+          "kind": "FunctionDef",
+          "line": 5987,
+          "end_line": 6023
+        },
+        {
+          "name": "load_demo_directives",
+          "kind": "FunctionDef",
+          "line": 6025,
+          "end_line": 6035
+        },
+        {
+          "name": "on_llm_toggled",
+          "kind": "FunctionDef",
+          "line": 6041,
+          "end_line": 6050
+        },
+        {
+          "name": "on_llm_backend_changed",
+          "kind": "FunctionDef",
+          "line": 6052,
+          "end_line": 6060
+        },
+        {
+          "name": "open_llm_settings_hub",
+          "kind": "FunctionDef",
+          "line": 6062,
+          "end_line": 6066
+        },
+        {
+          "name": "open_talk_to_ai_hub",
+          "kind": "FunctionDef",
+          "line": 6068,
+          "end_line": 6075
+        },
+        {
+          "name": "_sync_llm_ui_from_engine",
+          "kind": "FunctionDef",
+          "line": 6077,
+          "end_line": 6090
+        },
+        {
+          "name": "test_llm_connection",
+          "kind": "FunctionDef",
+          "line": 6092,
+          "end_line": 6106
+        },
+        {
+          "name": "_on_inline_verify_finished",
+          "kind": "FunctionDef",
+          "line": 6108,
+          "end_line": 6124
+        },
+        {
+          "name": "on_send_llm_prompt",
+          "kind": "FunctionDef",
+          "line": 6126,
+          "end_line": 6131
+        },
+        {
+          "name": "on_quick_analyze_state",
+          "kind": "FunctionDef",
+          "line": 6133,
+          "end_line": 6134
+        },
+        {
+          "name": "on_quick_verify_goal",
+          "kind": "FunctionDef",
+          "line": 6136,
+          "end_line": 6138
+        },
+        {
+          "name": "on_quick_mutation_strategy",
+          "kind": "FunctionDef",
+          "line": 6140,
+          "end_line": 6141
+        },
+        {
+          "name": "on_quick_audit_creed",
+          "kind": "FunctionDef",
+          "line": 6143,
+          "end_line": 6144
+        },
+        {
+          "name": "_execute_llm_query",
+          "kind": "FunctionDef",
+          "line": 6146,
+          "end_line": 6164
+        },
+        {
+          "name": "_on_llm_response",
+          "kind": "FunctionDef",
+          "line": 6166,
+          "end_line": 6168
+        },
+        {
+          "name": "populate_runtime_tree",
+          "kind": "FunctionDef",
+          "line": 6174,
+          "end_line": 6200
+        },
+        {
+          "name": "on_module_selected",
+          "kind": "FunctionDef",
+          "line": 6202,
+          "end_line": 6222
+        },
+        {
+          "name": "reload_project_runtime",
+          "kind": "FunctionDef",
+          "line": 6224,
+          "end_line": 6227
+        },
+        {
+          "name": "build_config",
+          "kind": "FunctionDef",
+          "line": 6233,
+          "end_line": 6250
+        },
+        {
+          "name": "on_toggle_relay_clicked",
+          "kind": "FunctionDef",
+          "line": 6252,
+          "end_line": 6256
+        },
+        {
+          "name": "on_reset_fsm_clicked",
+          "kind": "FunctionDef",
+          "line": 6258,
+          "end_line": 6274
+        },
+        {
+          "name": "start_relay",
+          "kind": "FunctionDef",
+          "line": 6276,
+          "end_line": 6316
+        },
+        {
+          "name": "stop_relay",
+          "kind": "FunctionDef",
+          "line": 6318,
+          "end_line": 6335
+        },
+        {
+          "name": "update_telemetry",
+          "kind": "FunctionDef",
+          "line": 6337,
+          "end_line": 6398
+        },
+        {
+          "name": "_get_current_relay_state_dict",
+          "kind": "FunctionDef",
+          "line": 6400,
+          "end_line": 6420
+        },
+        {
+          "name": "_get_active_outcome_guard",
+          "kind": "FunctionDef",
+          "line": 6422,
+          "end_line": 6425
+        },
+        {
+          "name": "load_safe_profile",
+          "kind": "FunctionDef",
+          "line": 6431,
+          "end_line": 6433
+        },
+        {
+          "name": "load_quick_profile",
+          "kind": "FunctionDef",
+          "line": 6435,
+          "end_line": 6437
+        },
+        {
+          "name": "load_forensics_profile",
+          "kind": "FunctionDef",
+          "line": 6439,
+          "end_line": 6441
+        },
+        {
+          "name": "_apply_cfg_to_ui",
+          "kind": "FunctionDef",
+          "line": 6443,
+          "end_line": 6458
+        },
+        {
+          "name": "_on_mutation_scenario_changed",
+          "kind": "FunctionDef",
+          "line": 6464,
+          "end_line": 6465
+        },
+        {
+          "name": "_load_selected_scenario_preset",
+          "kind": "FunctionDef",
+          "line": 6467,
+          "end_line": 6505
+        },
+        {
+          "name": "_randomize_current_payload",
+          "kind": "FunctionDef",
+          "line": 6507,
+          "end_line": 6619
+        },
+        {
+          "name": "_format_hex_diff_html",
+          "kind": "FunctionDef",
+          "line": 6621,
+          "end_line": 6657
+        },
+        {
+          "name": "_parse_tlv_tree_html",
+          "kind": "FunctionDef",
+          "line": 6659,
+          "end_line": 6689
+        },
+        {
+          "name": "on_execute_full_mutation_pipeline",
+          "kind": "FunctionDef",
+          "line": 6691,
+          "end_line": 7025
+        },
+        {
+          "name": "_copy_mutation_result_to_clipboard",
+          "kind": "FunctionDef",
+          "line": 7027,
+          "end_line": 7042
+        },
+        {
+          "name": "on_simulate_issuer_arpc",
+          "kind": "FunctionDef",
+          "line": 7044,
+          "end_line": 7142
+        },
+        {
+          "name": "on_test_mutation_transformation",
+          "kind": "FunctionDef",
+          "line": 7144,
+          "end_line": 7146
+        },
+        {
+          "name": "on_clear_logs",
+          "kind": "FunctionDef",
+          "line": 7148,
+          "end_line": 7150
+        },
+        {
+          "name": "on_upload_log_to_ai",
+          "kind": "FunctionDef",
+          "line": 7152,
+          "end_line": 7156
+        },
+        {
+          "name": "on_submit_terminal_logs_to_ai",
+          "kind": "FunctionDef",
+          "line": 7158,
+          "end_line": 7178
+        },
+        {
+          "name": "_handle_submitted_log_prompt",
+          "kind": "FunctionDef",
+          "line": 7180,
+          "end_line": 7183
+        },
+        {
+          "name": "show_about_dialog",
+          "kind": "FunctionDef",
+          "line": 7185,
+          "end_line": 7194
+        },
+        {
+          "name": "_serialize",
+          "kind": "FunctionDef",
+          "line": 248,
+          "end_line": 269
+        },
+        {
+          "name": "_stable_hash",
+          "kind": "FunctionDef",
+          "line": 1764,
+          "end_line": 1769
+        },
+        {
+          "name": "_text",
+          "kind": "FunctionDef",
+          "line": 1771,
+          "end_line": 1787
+        },
+        {
+          "name": "_serialize_tool_result",
+          "kind": "FunctionDef",
+          "line": 1789,
+          "end_line": 1800
+        },
+        {
+          "name": "_looks_failed",
+          "kind": "FunctionDef",
+          "line": 1802,
+          "end_line": 1807
+        },
+        {
+          "name": "_post",
+          "kind": "FunctionDef",
+          "line": 1809,
+          "end_line": 1831
+        },
+        {
+          "name": "_cat_label",
+          "kind": "FunctionDef",
+          "line": 2755,
+          "end_line": 2759
+        },
+        {
+          "name": "_on_section_toggled",
+          "kind": "FunctionDef",
+          "line": 2992,
+          "end_line": 2994
+        },
+        {
+          "name": "_replace_code_block",
+          "kind": "FunctionDef",
+          "line": 3205,
+          "end_line": 3208
+        },
+        {
+          "name": "install_zen",
+          "kind": "FunctionDef",
+          "line": 5117,
+          "end_line": 5121
+        },
+        {
+          "name": "run",
+          "kind": "FunctionDef",
+          "line": 6284,
+          "end_line": 6288
+        },
+        {
+          "name": "render_node",
+          "kind": "FunctionDef",
+          "line": 6670,
+          "end_line": 6678
+        }
+      ]
+    }
+  },
+  "symbols": {},
+  "imports": {
+    "ai_tools.py": [
+      "__future__",
+      "ast",
+      "difflib",
+      "inspect",
+      "io",
+      "json",
+      "logging",
+      "os",
+      "re",
+      "sys",
+      "time",
+      "traceback",
+      "dataclasses",
+      "pathlib",
+      "emv_cognition",
+      "typing",
+      "emv_god",
+      "constants",
+      "emv",
+      "guard",
+      "issuer_profiles",
+      "issuer_simulator",
+      "mod_emv_synthesizer",
+      "mutations",
+      "parser",
+      "protocol",
+      "tlv",
+      "utils",
+      "emv_god",
+      "logger"
+    ],
+    "qt_app.py": [
+      "__future__",
+      "importlib",
+      "inspect",
+      "json",
+      "os",
+      "random",
+      "re",
+      "shutil",
+      "subprocess",
+      "sys",
+      "threading",
+      "time",
+      "urllib.error",
+      "urllib.request",
+      "re",
+      "collections",
+      "dataclasses",
+      "pathlib",
+      "typing",
+      "datetime",
+      "PyQt6",
+      "PyQt6.QtCore",
+      "PyQt6.QtGui",
+      "PyQt6.QtWidgets",
+      "agent_memory",
+      "ai_tools",
+      "ai_tools",
+      "bypasses",
+      "constants",
+      "emv",
+      "guard",
+      "issuer_profiles",
+      "issuer_simulator",
+      "logger",
+      "mod_emv_synthesizer",
+      "mutations",
+      "parser",
+      "protocol",
+      "rel8hf",
+      "rel8hf_launcher",
+      "tlv",
+      "tp_hub",
+      "rel8hf",
+      "rel8hf_launcher",
+      "ai_tools",
+      "ai_tools",
+      "ai_tools",
+      "rel8hf",
+      "hashlib",
+      "PySide6",
+      "PySide6.QtCore",
+      "PySide6.QtGui",
+      "PySide6.QtWidgets"
+    ]
+  },
+  "dependents": {
+    "ai_tools.py": [
+      "qt_app.py",
+      "qt_app.py",
+      "qt_app.py",
+      "qt_app.py",
+      "qt_app.py"
+    ]
+  },
+  "journal": [],
+  "plans": {},
+  "verification": [],
+  "lessons": []
+}

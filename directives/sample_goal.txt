@@ -1,0 +1,6 @@
+# REL8 MISSION OBJECTIVES & OPERATIONAL GOAL
+
+- Goal 1: Initialize dual UDP peers (Reader at 127.0.0.1:5001, Emulator at 127.0.0.1:5002).
+- Goal 2: Perform seamless GPO negotiation under 100ms roundtrip latency.
+- Goal 3: Force offline approval via CTQ (Tag 9F6C) CDCVM assertion and AIP (Tag 82) bit 5 clearing.
+- Goal 4: Verify that OutcomeGuard reaches COMPLETE phase with 0 quarantined frames and 0 dropped packets.
